@@ -2,6 +2,8 @@
     --first-color: #0b29ee;
     --second-color: #ada4a4;
     --third-color: #636262;
+    --black-color: #000000;
+    --white-color: #ffffff;
     --sm: 14px;
     --md: 18px;
     --lg: 24px;
@@ -79,11 +81,42 @@ main {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    position: relative;
+}
+
+section .moreInfo {
+    width: 98vw;
+    height: 100vh;
+    background-color: var(--black-color);
+    font-size: var(--lg);
+    color: var(--second-color);
+    font-weight: bold;
+    display: none;
+    padding: 50px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+#closeInfo {
+    position: absolute;
+    float: right;
+    margin-right: 0;
+    display: none;
+    background-color: var(--white-color);
+    z-index: 20;
+    margin-top: -51%;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+#closeInfo:hover {
+    cursor: pointer;
 }
 
 .logo-section {
     width: 250px;
     height: 250px;
+    margin: 20 auto;
 }
 
 footer {

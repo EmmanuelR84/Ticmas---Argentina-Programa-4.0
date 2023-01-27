@@ -116,3 +116,34 @@ document.querySelector('#website').addEventListener('mouseleave', function() {
 document.querySelector('#website').addEventListener('mouseleave', function() {
     document.querySelector('#secondParagraph').innerHTML = 'Nice to meet you!';
 });
+
+
+
+// Change more info
+document.querySelector('#moreInfo').addEventListener('mouseover', function() {
+    document.querySelector('#firstParagraph').innerHTML = 'click for more';
+});
+
+document.querySelector('#moreInfo').addEventListener('mouseover', function() {
+    document.querySelector('#secondParagraph').innerHTML = "Info";
+});
+
+document.querySelector('#moreInfo').addEventListener('mouseleave', function() {
+    document.querySelector('#firstParagraph').innerHTML = 'Hello!!';
+});
+
+document.querySelector('#moreInfo').addEventListener('mouseleave', function() {
+    document.querySelector('#secondParagraph').innerHTML = 'Nice to meet you!';
+});
+
+document.querySelector('#moreInfo').addEventListener('click', function() {
+    document.querySelector('.moreInfo').style.display = 'block';
+});
+
+document.querySelector('#moreInfo').addEventListener('click', function() {
+    document.querySelector('#closeInfo').style.display = 'block';
+    document.querySelector('#closeInfo').addEventListener('click', function() {
+        document.querySelector('.moreInfo').style.display = 'none';
+        document.querySelector('#closeInfo').style.display = 'none';
+    });
+});
