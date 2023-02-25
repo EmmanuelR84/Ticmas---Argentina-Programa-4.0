@@ -136,14 +136,13 @@ document.querySelector('#moreInfo').addEventListener('mouseleave', function() {
     document.querySelector('#secondParagraph').innerHTML = 'Nice to meet you!';
 });
 
-document.querySelector('#moreInfo').addEventListener('click', function() {
-    document.querySelector('.moreInfo').style.display = 'block';
-});
+const infoDiv = document.querySelector('.info__container');
 
 document.querySelector('#moreInfo').addEventListener('click', function() {
-    document.querySelector('#closeInfo').style.display = 'block';
-    document.querySelector('#closeInfo').addEventListener('click', function() {
-        document.querySelector('.moreInfo').style.display = 'none';
-        document.querySelector('#closeInfo').style.display = 'none';
-    });
+    console.log('click en more info');
+    infoDiv.classList.remove('inactive');
+});
+
+document.querySelector('#closeInfo').addEventListener('click', () => {
+    infoDiv.classList.add('inactive');
 });

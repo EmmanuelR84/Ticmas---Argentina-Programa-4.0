@@ -10,6 +10,10 @@
     --exl: 32px;
 }
 
+.inactive {
+    display: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -17,12 +21,10 @@ body {
 #containerDiv {
     background: var(--second-color);
     text-align: center;
-    width: 100%;
 }
 
 #containerDiv img {
     width: 200px;
-    height: 200px;
     border-radius: 50%;
     margin: 10px auto;
 }
@@ -45,7 +47,6 @@ body {
 
 nav {
     text-align: center;
-    height: auto;
     margin: 25px;
 }
 
@@ -67,45 +68,34 @@ nav ul li img {
 li img:hover {
     transition: .5s;
     opacity: 1;
-    scale: 1.2;
+    transform: scale(1.2);
     cursor: pointer;
 }
 
 main {
     width: 100%;
-    height: 30vh;
-    padding: 20px;
     box-sizing: border-box;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    position: relative;
 }
 
-section .moreInfo {
-    width: 98vw;
-    height: 100vh;
-    background-color: var(--black-color);
+.moreInfo {
+    height: auto;
+    background-color: var(--second-color);
     font-size: var(--lg);
-    color: var(--second-color);
+    color: var(--black-color);
     font-weight: bold;
-    display: none;
     padding: 50px;
-    z-index: 10;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 #closeInfo {
     position: absolute;
-    float: right;
-    margin-right: 0;
-    display: none;
-    background-color: var(--white-color);
-    z-index: 20;
-    margin-top: -51%;
-    margin-left: 5px;
+    right: 2rem;
     border-radius: 50%;
 }
 
@@ -114,15 +104,16 @@ section .moreInfo {
 }
 
 .logo-section {
-    width: 250px;
-    height: 250px;
-    margin: 20 auto;
+    width: 15rem;
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
     font-size: var(--sm);
-    margin-top: 10px;
+    height: 5rem;
 }
 
 footer a {
@@ -183,14 +174,12 @@ footer a:hover {
     li img:hover {
         transition: .5s;
         opacity: 1;
-        scale: 1.2;
+        transform: scale(1.2);
         cursor: pointer;
     }
     
     main {
         width: 100%;
-        height: 30vh;
-        padding: 20px;
         box-sizing: border-box;
         font-weight: bold;
         display: flex;
@@ -205,9 +194,10 @@ footer a:hover {
     }
     
     footer {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: var(--sm);
-        margin-top: 10px;
     }
     
     footer a {
